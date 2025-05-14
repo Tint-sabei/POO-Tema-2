@@ -239,7 +239,11 @@ if (auto domesticCat = std::dynamic_pointer_cast<DomesticCat>(myCat)) {
 
 ```cpp
 std::vector<std::shared_ptr<Cat>> cats;
-cats.push_back(std::make_shared<DomesticCat>("Mimi", 3, 80));
+```
+```cpp
+void GameState::addCat(const std::shared_ptr<Cat>& cat) {
+    cats.push_back(cat); 
+}
 ```
 
 ## **5. Exception Handling**
