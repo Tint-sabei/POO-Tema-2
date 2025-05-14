@@ -101,7 +101,8 @@ Feeding Chonky with Fish...
         `·.¸ `·  ¸.·´\`·¸)
             `\\´´\¸.·´
 
-    Fullness after feeding: 80
+    This is a FatCat! Extra fullness bonus applied!
+    Fullness after feeding: 90
       
          /\     /\
         {  `---'  }
@@ -115,6 +116,32 @@ Feeding Chonky with Fish...
           \__/  /(_/     \__/
             (__/                     
   "I'm okay. I can eat more!"
+
+Choose an option (1-6): 3
+
+Feeding Chonky with Milk...
+
+           *==== Milk =====*
+               _________
+              | _______ |
+             / \         \
+            /___\_________\
+            |   | \       |
+            |   |  \      |
+            |   |   \     |
+            |   | M  \    |
+            |   |     \   |
+            |   |\  I  \  |
+            |   | \     \ |
+            |   |  \  L  \|
+            |   |   \     |
+            |   |    \  K |
+            |   |     \   |
+            |   |      \  |
+            |___|_______\_|
+
+Error: Fullness Level cannot exceed 100! Overfeeding alert.
+
 
 
 Choose an option (1-6): 5
