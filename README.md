@@ -196,11 +196,9 @@ myCat->sound(); // Outputs: Purrr... meow!
 
 ### **C. Virtual Constructor (Clone)**
 ```cpp
-std::shared_ptr<Cat> cat1 = std::make_shared<DomesticCat>("Mimi", 3, 80);
-std::shared_ptr<Cat> cat2 = cat1->clone(); // Polymorphic Cloning
-
-std::cout << "Cat 1: " << cat1->getType() << "\n";
-std::cout << "Cat 2: " << cat2->getType() << "\n";
+std::shared_ptr<Cat> DomesticCat::clone() const {
+    return std::make_shared<DomesticCat>(*this);
+}
 ```
 ### **D. Attributes as Base Class Pointers in Another Class (GameState)**
 
@@ -210,16 +208,8 @@ private:
     std::vector<std::shared_ptr<Cat>> cats; 
 
 public:
-    void addCat(const std::shared_ptr<Cat>& cat) {
-        cats.push_back(cat);
-    }
-
-    // this code also is not written in the code. 
-    void makeCatSound() const {
-        for (const auto& cat : cats) {
-            cat->sound();  // Polymorphic Call
-        }
-    }
+    void addCat(const std::shared_ptr<Cat>& cat);
+    void makeCatSound(size_t index) const;
 };
 ```
 
