@@ -169,6 +169,8 @@ Choose an option (1-6): 5
 | `<vector>`   | Dynamic storage of objects.    |
 
 ---
+## **6. Project Requirement**
+
 ## **1. Virtual Functions and Polymorphism**
 
 ### **A. Abstract Base Class with Pure Virtual Functions**
@@ -193,7 +195,6 @@ myCat->sound(); // Outputs: Purrr... meow!
 ```
 
 ### **C. Virtual Constructor (Clone)**
-
 ```cpp
 std::shared_ptr<Cat> cat1 = std::make_shared<DomesticCat>("Mimi", 3, 80);
 std::shared_ptr<Cat> cat2 = cat1->clone(); // Polymorphic Cloning
@@ -201,7 +202,6 @@ std::shared_ptr<Cat> cat2 = cat1->clone(); // Polymorphic Cloning
 std::cout << "Cat 1: " << cat1->getType() << "\n";
 std::cout << "Cat 2: " << cat2->getType() << "\n";
 ```
-
 ### **D. Attributes as Base Class Pointers in Another Class (GameState)**
 
 ```cpp
@@ -214,7 +214,8 @@ public:
         cats.push_back(cat);
     }
 
-    void makeAllCatsSound() const {
+    // this code also is not written in the code. 
+    void makeCatSound() const {
         for (const auto& cat : cats) {
             cat->sound();  // Polymorphic Call
         }
@@ -250,8 +251,6 @@ if (auto domesticCat = std::dynamic_pointer_cast<DomesticCat>(myCat)) {
 std::vector<std::shared_ptr<Cat>> cats;
 cats.push_back(std::make_shared<DomesticCat>("Mimi", 3, 80));
 ```
-
----
 
 ## **5. Exception Handling**
 
